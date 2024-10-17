@@ -20,8 +20,6 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
         serif: ['var(--font-serif)', ...fontFamily.serif],
-        geist: ['var(--font-geist-sans)', ...fontFamily.sans],
-        'geist-mono': ['var(--font-geist-mono)', ...fontFamily.mono]
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -72,6 +70,6 @@ const config: Config = {
       }
     }
   },
-  plugins: [require('tailwindcss-animate')]
+  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')]
 }
 export default config

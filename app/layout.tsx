@@ -8,18 +8,9 @@ import Providers from '@/components/providers'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 
+import './prosemirror.css'
 import './globals.css'
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900'
-})
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900'
-})
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -27,8 +18,11 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Next Shadcn Template',
-  description: 'NextJs template with shadcn/ui'
+  title: 'Serif',
+  description: 'Blogging Platform',
+  icons: {
+    icon: '/Serif.png'
+  }
 }
 
 export default function RootLayout({
@@ -38,19 +32,17 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang='en' className='scroll-smooth' suppressHydrationWarning>
+      <html lang='en' className='scroll-smooth' suppressHydrationWarning={true}>
         <body
           className={cn(
-            'flex min-h-screen flex-col duration-300',
-            geistSans.variable,
-            geistMono.variable,
+            'flex min-h-screen flex-col',
             inter.variable,
             playfair.variable
           )}
         >
           <Providers>
             <Header />
-            <main className='grow'>{children}</main>
+            <main className='grow flex mt-[65px]'>{children}</main>
             <Footer />
           </Providers>
         </body>

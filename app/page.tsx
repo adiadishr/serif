@@ -1,13 +1,19 @@
+import NewestUsers from "@/components/home/newest-users";
+import PostItem from "@/components/home/post-item";
+import Posts from "@/components/home/posts";
+
 export default function Home() {
+
   return (
-    <section className='py-24'>
-      <div className='container'>
-        <h1 className='font-serif text-3xl font-bold'>NextJs Clerk Starter</h1>
-        <p className='mt-3 text-muted-foreground'>
-          A NextJs starter template with Clerk authentication, shadcn/ui and
-          Tailwind CSS.
-        </p>
+    <section className="flex container py-8">
+      <div className="flex flex-col w-full md:w-2/3 lg:w-3/4 md:pr-12">
+        <ul>
+          <Posts />
+        </ul>
       </div>
-    </section>
+      <div className="md:flex hidden flex-col md:w-1/3 lg:w-1/4 relative">
+        <NewestUsers />
+      </div>
+    </section >
   )
 }
