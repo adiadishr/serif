@@ -163,7 +163,7 @@ export default function NewPostForm() {
                     <Button
                         type='submit'
                         disabled={isSubmitting}
-                        className='w-full sm:w-1/2'
+                        className='w-full'
                     >
                         {isSubmitting ? (
                             <>

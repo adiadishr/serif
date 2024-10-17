@@ -22,6 +22,21 @@ export const metadata: Metadata = {
   description: 'Blogging Platform',
   icons: {
     icon: '/Serif.png'
+  },
+  openGraph: {
+    title: 'Serif',
+    description: 'Blogging Platform.',
+    url: 'https://serif-seven.vercel.app',
+    images: [
+      {
+        url: 'https://serif-seven.vercel.app/Serif.png',
+        width: 1200,
+        height: 630,
+        alt: 'Blogging Platform',
+
+      }
+    ]
+
   }
 }
 
