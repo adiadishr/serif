@@ -6,6 +6,7 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { Spinner } from "../ui/spinner";
+import { formatDate, getTimeAgo } from "@/lib/utils";
 
 export default function NewestUsers() {
     const users = useQuery(api.users.getRecentUsers);
@@ -27,7 +28,7 @@ export default function NewestUsers() {
                         </div>
                         <div className="flex flex-col">
                             <p className="text-sm font-sans"> {user.firstName + " " + user.lastName}</p>
-                            <p className="text-xs font-sans text-muted-foreground">{user.email}</p>
+                            <p className="text-xs font-sans text-muted-foreground">Joined {getTimeAgo(user._creationTime)}</p>
                         </div>
                     </Link>
                 ))}

@@ -42,17 +42,17 @@ export default function Post({ slug }: { slug: string }) {
             {/* Interactions */}
             <div className='mt-6 flex w-full items-center justify-between border-y px-4 py-3 text-muted-foreground'>
                 <div className='flex items-center gap-4'>
-                    <div className="flex hover:text-foreground duration-300 items-center gap-2 cursor-pointer">
-                        <Heart className='size-5' />
-                        <span>{post.likes}</span>
-                    </div>
                     <button
                         className="flex hover:text-foreground duration-300 items-center gap-2 cursor-pointer"
                         onClick={async () => await likePost({ slug: post.slug })}
                     >
+                        <Heart className='size-5' />
+                        <span>{post.likes}</span>
+                    </button>
+                    <div className="flex hover:text-foreground duration-300 items-center gap-2 cursor-pointer">
                         <MessageSquare className='size-5' />
                         <span>100</span>
-                    </button>
+                    </div>
                 </div>
                 <div className='flex items-center gap-4'>
                     <CirclePlay className='size-5 hover:text-foreground duration-300 cursor-pointer' />
